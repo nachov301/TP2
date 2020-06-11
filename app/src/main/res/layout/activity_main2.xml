@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDark"
+    tools:context=".Main2Activity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="152dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cash" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="243dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/conversorMonedas"
+        android:textColor="@color/otroColor"
+        android:textColorHighlight="@color/otroColor"
+        android:textColorHint="@color/otroColor"
+        android:textColorLink="@color/otroColor"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/ingresarMonto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/ingreseMontoEnPesos"
+        android:inputType="numberDecimal"
+        android:textColor="@color/otroColor"
+        android:textColorHighlight="@color/otroColor"
+        android:textColorHint="@color/otroColor"
+        android:textColorLink="@color/otroColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/seleccioneMoneda"
+        android:textColor="@color/otroColor"
+        android:textColorHighlight="@color/otroColor"
+        android:textColorHint="@color/otroColor"
+        android:textColorLink="@color/otroColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingresarMonto" />
+
+    <RadioButton
+        android:id="@+id/dolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="DOLAR (USA)"
+        android:textColor="@color/otroColor"
+        android:textColorHighlight="@color/otroColor"
+        android:textColorHint="@color/otroColor"
+        android:textColorLink="@color/otroColor"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <RadioButton
+        android:id="@+id/euro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="EURO"
+        android:textColor="@color/otroColor"
+        android:textColorHighlight="@color/otroColor"
+        android:textColorHint="@color/otroColor"
+        android:textColorLink="@color/otroColor"
+        app:layout_constraintStart_toStartOf="@+id/dolar"
+        app:layout_constraintTop_toBottomOf="@+id/dolar" />
+
+    <RadioButton
+        android:id="@+id/real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="REAL (BRAZIL)"
+        android:textColor="@color/otroColor"
+        android:textColorHighlight="@color/otroColor"
+        android:textColorHint="@color/otroColor"
+        android:textColorLink="@color/otroColor"
+        app:layout_constraintStart_toStartOf="@+id/euro"
+        app:layout_constraintTop_toBottomOf="@+id/euro" />
+
+    <EditText
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/resultado"
+        android:inputType="numberDecimal"
+        android:textColor="@color/otroColor"
+        android:textColorHighlight="@color/otroColor"
+        android:textColorHint="@color/otroColor"
+        android:textColorLink="@color/otroColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/real" />
+
+    <Button
+        android:id="@+id/btnConvertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/otroColor"
+        android:text="@string/convertir"
+        app:layout_constraintStart_toStartOf="@+id/resultado"
+        app:layout_constraintTop_toBottomOf="@+id/resultado" />
+
+    <Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/otroColor"
+        android:text="@string/reiniciar"
+        app:layout_constraintEnd_toEndOf="@+id/resultado"
+        app:layout_constraintTop_toBottomOf="@+id/resultado" />
+
+    <Button
+        android:id="@+id/btn1Pantalla"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/otroColor"
+        android:text="@string/primerPantalla"
+        app:layout_constraintEnd_toEndOf="@+id/btnReiniciar"
+        app:layout_constraintStart_toStartOf="@+id/btnConvertir"
+        app:layout_constraintTop_toBottomOf="@+id/btnReiniciar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

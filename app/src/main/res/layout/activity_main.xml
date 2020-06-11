@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDark"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnRestar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@color/otroColor"
+        android:text="@string/restar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSumar"
+        app:layout_constraintStart_toEndOf="@+id/btnSumar" />
+
+    <Button
+        android:id="@+id/btnSumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/otroColor"
+        android:text="@string/sumar"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/btnZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/otroColor"
+        android:text="@string/zoom2"
+        app:layout_constraintStart_toStartOf="@+id/btnSumar"
+        app:layout_constraintTop_toBottomOf="@+id/btnSumar" />
+
+    <Button
+        android:id="@+id/btnZoom2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@color/otroColor"
+        android:text="@string/zoom"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnZoom"
+        app:layout_constraintStart_toEndOf="@+id/btnZoom" />
+
+    <Button
+        android:id="@+id/btnOcultar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/otroColor"
+        android:text="@string/ocultar"
+        app:layout_constraintStart_toStartOf="@+id/btnZoom"
+        app:layout_constraintTop_toBottomOf="@+id/btnZoom" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="@color/otroColor"
+        android:text="@string/reset"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnOcultar"
+        app:layout_constraintStart_toEndOf="@+id/btnOcultar" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cash" />
+
+    <Button
+        android:id="@+id/btn2Pantalla"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/otroColor"
+        android:text="@string/segundaPantalla"
+        app:layout_constraintEnd_toEndOf="@+id/btnReset"
+        app:layout_constraintStart_toStartOf="@+id/btnOcultar"
+        app:layout_constraintTop_toBottomOf="@+id/btnReset" />
+</androidx.constraintlayout.widget.ConstraintLayout>

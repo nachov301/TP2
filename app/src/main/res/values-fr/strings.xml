@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TP2</string>
+    <string name="sumar">ajouter</string>
+    <string name="zoom">zoom +</string>
+    <string name="zoom2">zoom -</string>
+    <string name="ocultar">cacher</string>
+    <string name="reset">réinitialiser</string>
+    <string name="restar">soustraire</string>
+    <string name="seleccioneMoneda">sélectionner une devise</string>
+    <string name="reiniciar">redémarrer</string>
+    <string name="convertir">"changer en "</string>
+    <string name="conversorMonedas">"convertisseur de devises "</string>
+    <string name="ingreseMontoEnPesos">entrez le montant en pesos</string>
+    <string name="resultado">Résultat</string>
+    <string name="segundaPantalla">" deuxième écran"</string>
+    <string name="primerPantalla">"premier écran "</string>
+</resources>
