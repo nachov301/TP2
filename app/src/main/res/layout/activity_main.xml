@@ -11,22 +11,22 @@
         android:id="@+id/btnRestar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:background="@color/otroColor"
         android:text="@string/restar"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnSumar"
-        app:layout_constraintStart_toEndOf="@+id/btnSumar" />
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <Button
         android:id="@+id/btnSumar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
         android:background="@color/otroColor"
         android:text="@string/sumar"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRestar"
+        app:layout_constraintStart_toEndOf="@+id/btnRestar" />
 
     <Button
         android:id="@+id/btnZoom"
@@ -35,8 +35,8 @@
         android:layout_marginTop="8dp"
         android:background="@color/otroColor"
         android:text="@string/zoom2"
-        app:layout_constraintStart_toStartOf="@+id/btnSumar"
-        app:layout_constraintTop_toBottomOf="@+id/btnSumar" />
+        app:layout_constraintStart_toStartOf="@+id/btnRestar"
+        app:layout_constraintTop_toBottomOf="@+id/btnRestar" />
 
     <Button
         android:id="@+id/btnZoom2"
@@ -90,4 +90,16 @@
         app:layout_constraintEnd_toEndOf="@+id/btnReset"
         app:layout_constraintStart_toStartOf="@+id/btnOcultar"
         app:layout_constraintTop_toBottomOf="@+id/btnReset" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textColor="@color/otroColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,4 +14,10 @@
     <string name="resultado">Resultado</string>
     <string name="primerPantalla">Primer pantalla</string>
     <string name="segundaPantalla">Segunda pantalla</string>
+    <string name="user">Ingrese su nombre</string>
+    <string name="password">Ingrese su contraseña</string>
+    <string name="bienvenido">Bienvenido de nuevo</string>
+    <string name="recordar">Recordar usuario</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="sinRegistrar">Sin registrar? Crear usuario</string>
 </resources>

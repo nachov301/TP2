@@ -24,7 +24,7 @@
         android:layout_width="243dp"
         android:layout_height="21dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="@string/conversorMonedas"
         android:textColor="@color/otroColor"
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="@string/seleccioneMoneda"
         android:textColor="@color/otroColor"
@@ -70,52 +70,66 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ingresarMonto" />
 
-    <RadioButton
-        android:id="@+id/dolar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="DOLAR (USA)"
-        android:textColor="@color/otroColor"
-        android:textColorHighlight="@color/otroColor"
-        android:textColorHint="@color/otroColor"
-        android:textColorLink="@color/otroColor"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <RadioButton
-        android:id="@+id/euro"
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="EURO"
-        android:textColor="@color/otroColor"
-        android:textColorHighlight="@color/otroColor"
-        android:textColorHint="@color/otroColor"
-        android:textColorLink="@color/otroColor"
-        app:layout_constraintStart_toStartOf="@+id/dolar"
-        app:layout_constraintTop_toBottomOf="@+id/dolar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-    <RadioButton
-        android:id="@+id/real"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="REAL (BRAZIL)"
-        android:textColor="@color/otroColor"
-        android:textColorHighlight="@color/otroColor"
-        android:textColorHint="@color/otroColor"
-        android:textColorLink="@color/otroColor"
-        app:layout_constraintStart_toStartOf="@+id/euro"
-        app:layout_constraintTop_toBottomOf="@+id/euro" />
+        <RadioButton
+            android:id="@+id/dolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="checkButton"
+            android:text="DOLAR (USA)"
+            android:textColor="@color/otroColor"
+            android:textColorHighlight="@color/otroColor"
+            android:textColorHint="@color/otroColor"
+            android:textColorLink="@color/otroColor"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <RadioButton
+            android:id="@+id/euro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="checkButton"
+            android:text="EURO"
+            android:textColor="@color/otroColor"
+            android:textColorHighlight="@color/otroColor"
+            android:textColorHint="@color/otroColor"
+            android:textColorLink="@color/otroColor"
+            app:layout_constraintStart_toStartOf="@+id/dolar"
+            app:layout_constraintTop_toBottomOf="@+id/dolar" />
+
+        <RadioButton
+            android:id="@+id/real"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="checkButton"
+            android:text="REAL (BRAZIL)"
+            android:textColor="@color/otroColor"
+            android:textColorHighlight="@color/otroColor"
+            android:textColorHint="@color/otroColor"
+            android:textColorLink="@color/otroColor"
+            app:layout_constraintStart_toStartOf="@+id/euro"
+            app:layout_constraintTop_toBottomOf="@+id/euro" />
+
+
+    </RadioGroup>
+
 
     <EditText
         android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/resultado"
         android:inputType="numberDecimal"
@@ -125,7 +139,7 @@
         android:textColorLink="@color/otroColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/real" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <Button
         android:id="@+id/btnConvertir"
